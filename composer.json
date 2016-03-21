@@ -1,0 +1,13 @@
+{
+    "name": "symfony-docker/docker-bundle",
+    "description": "A Symfony Bundle that ships in Docker and Docker Compose support out-of-the-box",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Ribeiro",
+            "email": "drgomesp@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
