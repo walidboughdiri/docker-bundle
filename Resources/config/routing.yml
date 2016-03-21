@@ -1,3 +1,0 @@
-symfony_docker_homepage:
-    path:     /
-    defaults: { _controller: SymfonyDockerBundle:Default:index }
