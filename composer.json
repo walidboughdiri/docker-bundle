@@ -2,6 +2,9 @@
     "name": "symfony-docker/docker-bundle",
     "description": "A Symfony Bundle that ships in Docker and Docker Compose support out-of-the-box",
     "license": "MIT",
+    "autoload": {
+        "psr-4": { "SymfonyDocker\\DockerBundle\\": "" }
+    },
     "authors": [
         {
             "name": "Daniel Ribeiro",
