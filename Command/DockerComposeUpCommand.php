@@ -43,6 +43,6 @@ EOF
         $kernel = $this->getContainer()->get('kernel');
         $dockerComposeFile = $kernel->locateResource('@SymfonyDockerBundle/Resources/config/docker/docker-compose.yml');
 
-        $output->writeln(shell_exec("docker-compose -f {$dockerComposeFile} up"));
+        $output->writeln(shell_exec("docker-compose -f {$dockerComposeFile} up -d"));
     }
 }
