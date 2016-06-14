@@ -2,14 +2,14 @@ app:
     container_name: symfony-docker-app
     image: ubuntu:trusty
     volumes:
-        - ../../../../../../:/app
-        - ../../../../../../var/cache:/app/var/cache
+        - .:/app
+        - ./var/cache:/app/var/cache
         - /tmp
     tty: true
 
 php:
     container_name: symfony-docker-php
-    build: php
+    build: vendor/symfony-docker/docker-bundle/Resources/config/docker/php
     volumes_from:
         - app
     links:
@@ -17,7 +17,7 @@ php:
         - memcached
 nginx:
   container_name: symfony-docker-nginx
-  build: nginx
+  build: vendor/symfony-docker/docker-bundle/Resources/config/docker/nginx
   volumes_from:
       - app
   links:
