@@ -1,5 +1,5 @@
 {
-    "name": "symfony-docker/docker-bundle",
+    "name": "drgomesp/symfony-docker-bundle",
     "description": "A Symfony Bundle that ships in Docker and Docker Compose support out-of-the-box",
     "type": "symfony-bundle",
     "license": "MIT",
