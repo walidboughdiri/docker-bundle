@@ -1,0 +1,18 @@
+version: '2'
+services:
+    app:
+        build: ./app
+        volumes:
+          - ../../../../../../:/app
+    php56:
+        build: ./php56
+        volumes_from:
+          - app
+    web:
+        build: ./nginx
+        ports:
+         - "8080:80"
+        environment:
+           - NGINX_PORT=80
+        volumes_from:
+          - app
