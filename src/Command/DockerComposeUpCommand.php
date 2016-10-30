@@ -13,7 +13,7 @@ use Symfony\Component\HttpKernel\Kernel;
  * @author Daniel Ribeiro <drgomesp@gmail.com>
  * @package SymfonyDocker\DockerBundle\Command
  */
-class ComposeUpCommand extends ContainerAwareCommand
+class DockerComposeUpCommand extends ContainerAwareCommand
 {
     /**
      * {@inheritdoc}
