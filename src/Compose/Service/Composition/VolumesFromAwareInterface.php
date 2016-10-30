@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose\Service\Composition;
+namespace Drgomesp\DockerBundle\Compose\Service\Composition;
 
 /**
  * Interface VolumesFromAwareInterface
  *
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
- * @package Drgomesp\DockerCompose\Service
+ * @package Drgomesp\Compose\Service
  */
 interface VolumesFromAwareInterface
 {
     /**
      * The services from which the service volumes from as a key/value array
      *
-     * @return \Drgomesp\DockerBundle\DockerCompose\ServiceInterface[]
+     * @return \Drgomesp\DockerBundle\Compose\ServiceInterface[]
      */
     public function getOriginVolumes();
 }

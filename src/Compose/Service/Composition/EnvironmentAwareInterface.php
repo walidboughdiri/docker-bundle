@@ -9,24 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose\Service\Composition;
+namespace Drgomesp\DockerBundle\Compose\Service\Composition;
 
 /**
- * Interface VolumesAwareInterface
+ * Interface EnvironmentAwareInterface
  *
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
- * @package Drgomesp\DockerCompose\Service
+ * @package Drgomesp\Compose\Service
  */
-interface VolumesAwareInterface
+interface EnvironmentAwareInterface
 {
     /**
+     * The service environment variables as a key/value array
+     *
      * @return array
      */
-    public function getVolumes();
+    public function getEnvironment();
 
     /**
-     * @param array $volumes
+     * @param array $environment
      * @return ServiceInterface
      */
-    public function setVolumes(array $volumes);
+    public function setEnvironment(array $environment);
 }

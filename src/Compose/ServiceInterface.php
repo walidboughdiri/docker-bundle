@@ -9,15 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose;
+namespace Drgomesp\DockerBundle\Compose;
+
+use Drgomesp\DockerBundle\Yaml\YamlConvertibleInterface;
 
 /**
  * Interface ServiceInterface
  *
  * @author Daniel Ribeiro <drgomesp@gmail.com>
- * @package Drgomesp\DockerCompose
+ * @package Drgomesp\Compose
  */
-interface ServiceInterface extends \JsonSerializable
+interface ServiceInterface extends \JsonSerializable, YamlConvertibleInterface
 {
     /**
      * @return array

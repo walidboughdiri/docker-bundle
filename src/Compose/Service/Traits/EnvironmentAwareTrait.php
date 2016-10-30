@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose\Service\Traits;
+namespace Drgomesp\DockerBundle\Compose\Service\Traits;
 
 /**
  * Class EnvironmentAwareTrait
  *
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
- * @package Drgomesp\DockerBundle\DockerCompose\Service\Traits
+ * @package Drgomesp\DockerBundle\Compose\Service\Traits
  */
 trait EnvironmentAwareTrait
 {

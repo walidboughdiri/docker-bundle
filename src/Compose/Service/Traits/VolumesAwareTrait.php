@@ -9,36 +9,36 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose\Service\Traits;
+namespace Drgomesp\DockerBundle\Compose\Service\Traits;
 
 /**
- * Class PortsAwareTrait
+ * Class VolumesAwareTrait
  *
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
- * @package Drgomesp\DockerBundle\DockerCompose\Service\Traits
+ * @package Drgomesp\DockerBundle\Compose\Service\Traits
  */
-trait PortsAwareTrait
+trait VolumesAwareTrait
 {
     /**
      * @var array
      */
-    protected $ports;
+    protected $volumes;
 
     /**
      * @return array
      */
-    public function getPorts()
+    public function getVolumes()
     {
-        return $this->ports;
+        return $this->volumes;
     }
 
     /**
-     * @param array $ports
-     * @return ServiceInterface
+     * @param array $volumes
+     * @return self
      */
-    public function setPorts(array $ports)
+    public function setVolumes(array $volumes)
     {
-        $this->ports = $ports;
+        $this->volumes = $volumes;
         return $this;
     }
 }

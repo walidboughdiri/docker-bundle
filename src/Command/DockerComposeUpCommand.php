@@ -8,12 +8,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\HttpKernel\Kernel;
 
 /**
- * Class DockerComposeUpCommand
+ * Class ComposeUpCommand
  *
  * @author Daniel Ribeiro <drgomesp@gmail.com>
  * @package SymfonyDocker\DockerBundle\Command
  */
-class DockerComposeUpCommand extends ContainerAwareCommand
+class ComposeUpCommand extends ContainerAwareCommand
 {
     /**
      * {@inheritdoc}

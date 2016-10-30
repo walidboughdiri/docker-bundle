@@ -9,14 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose\Service\Traits;
-use Drgomesp\DockerBundle\DockerCompose\ServiceInterface;
+namespace Drgomesp\DockerBundle\Compose\Service\Traits;
+
+use Drgomesp\DockerBundle\Compose\ServiceInterface;
 
 /**
  * Class VolumesFromAwareTrait
  *
- * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
- * @package Drgomesp\DockerBundle\DockerCompose\Service
+ * @author Daniel Ribeiro <drgomesp@gmail.com>
+ * @package Drgomesp\DockerBundle\Compose\Service
  */
 trait VolumesFromAwareTrait
 {
@@ -36,7 +37,7 @@ trait VolumesFromAwareTrait
     }
 
     /**
-     * @return \Drgomesp\DockerBundle\DockerCompose\ServiceInterface[]
+     * @return \Drgomesp\DockerBundle\Compose\ServiceInterface[]
      */
     public function getOriginVolumes()
     {

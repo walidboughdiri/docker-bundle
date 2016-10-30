@@ -9,26 +9,36 @@
  * file that was distributed with this source code.
  */
 
-namespace Drgomesp\DockerBundle\DockerCompose\Service\Composition;
+namespace Drgomesp\DockerBundle\Compose\Service\Traits;
 
 /**
- * Interface PortsAwareInterface
+ * Class PortsAwareTrait
  *
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
- * @package Drgomesp\DockerCompose\Service
+ * @package Drgomesp\DockerBundle\Compose\Service\Traits
  */
-interface PortsAwareInterface
+trait PortsAwareTrait
 {
     /**
-     * The service exposed ports as a key/value array
-     *
+     * @var array
+     */
+    protected $ports;
+
+    /**
      * @return array
      */
-    public function getPorts();
+    public function getPorts()
+    {
+        return $this->ports;
+    }
 
     /**
      * @param array $ports
      * @return ServiceInterface
      */
-    public function setPorts(array $ports);
+    public function setPorts(array $ports)
+    {
+        $this->ports = $ports;
+        return $this;
+    }
 }
