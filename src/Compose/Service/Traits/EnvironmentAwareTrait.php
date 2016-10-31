@@ -41,4 +41,12 @@ trait EnvironmentAwareTrait
         $this->environment = $environment;
         return $this;
     }
+
+    /**
+     * @param array $serialized
+     */
+    public function applyEnvironment(array &$serialized)
+    {
+        $serialized[$this->getName()]['environment'] = $this->environment;
+    }
 }

@@ -16,6 +16,7 @@ use Drgomesp\DockerBundle\Compose\Service\Traits\ServiceTrait;
 use Drgomesp\DockerBundle\Compose\Service\Traits\VolumesAwareTrait;
 use Drgomesp\DockerBundle\Compose\ServiceInterface;
 use Drgomesp\DockerBundle\Yaml\Traits\YamlConvertibleTrait;
+use Drgomesp\DockerBundle\Yaml\YamlConvertibleInterface;
 
 /**
  * Represents the application service which contains the code.
@@ -23,7 +24,12 @@ use Drgomesp\DockerBundle\Yaml\Traits\YamlConvertibleTrait;
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
  * @package Drgomesp\Compose\Service
  */
-class App implements ServiceInterface, VolumesAwareInterface
+class App extends AbstractService implements VolumesAwareInterface, YamlConvertibleInterface
 {
-    use ServiceTrait, VolumesAwareTrait, YamlConvertibleTrait;
+    use VolumesAwareTrait, YamlConvertibleTrait;
+
+    protected function applyDeeperJsonSerialize(array &$serialized)
+    {
+        $this->applyVolumes($serialized);
+    }
 }

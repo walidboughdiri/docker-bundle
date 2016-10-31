@@ -41,4 +41,12 @@ trait VolumesAwareTrait
         $this->volumes = $volumes;
         return $this;
     }
+
+    /**
+     * @param array $serialized
+     */
+    public function applyVolumes(array &$serialized)
+    {
+        $serialized[$this->getName()]['volumes'] = $this->volumes;
+    }
 }

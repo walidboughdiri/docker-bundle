@@ -41,4 +41,12 @@ trait PortsAwareTrait
         $this->ports = $ports;
         return $this;
     }
+
+    /**
+     * @param array $serialized
+     */
+    public function applyPorts(array &$serialized)
+    {
+        $serialized[$this->getName()]['ports'] = $this->ports;
+    }
 }

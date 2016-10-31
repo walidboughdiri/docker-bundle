@@ -43,4 +43,14 @@ trait VolumesFromAwareTrait
     {
         return $this->originVolumes;
     }
+
+    /**
+     * @param array $serialized
+     */
+    public function applyOriginVolumes(array &$serialized)
+    {
+        $serialized[$this->getName()]['volumes_from'] = array_map(function (ServiceInterface $service) {
+            return $service->getName();
+        }, $this->originVolumes);
+    }
 }

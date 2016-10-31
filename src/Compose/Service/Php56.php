@@ -16,6 +16,7 @@ use Drgomesp\DockerBundle\Compose\Service\Traits\ServiceTrait;
 use Drgomesp\DockerBundle\Compose\Service\Traits\VolumesFromAwareTrait;
 use Drgomesp\DockerBundle\Compose\ServiceInterface;
 use Drgomesp\DockerBundle\Yaml\Traits\YamlConvertibleTrait;
+use Drgomesp\DockerBundle\Yaml\YamlConvertibleInterface;
 
 /**
  * Represents the php 5.6 service that contains php and php-fpm.
@@ -23,7 +24,15 @@ use Drgomesp\DockerBundle\Yaml\Traits\YamlConvertibleTrait;
  * @author Daniel Ribeiro <daniel.ribeiro@propertyfinder.ae>
  * @package Drgomesp\Compose\Service
  */
-class Php56 implements ServiceInterface, VolumesFromAwareInterface
+class Php56 extends AbstractService implements VolumesFromAwareInterface, YamlConvertibleInterface
 {
-    use ServiceTrait, VolumesFromAwareTrait, YamlConvertibleTrait;
+    use VolumesFromAwareTrait, YamlConvertibleTrait;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function applyDeeperJsonSerialize(array &$serialized)
+    {
+        $this->applyOriginVolumes($serialized);
+    }
 }
