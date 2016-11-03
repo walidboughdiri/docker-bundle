@@ -17,6 +17,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "phpspec/phpspec": "^2.5"
+        "phpspec/phpspec": "^2.5",
+        "symfony/yaml": "^3.1"
     }
 }

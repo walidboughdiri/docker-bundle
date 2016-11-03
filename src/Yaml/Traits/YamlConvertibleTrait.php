@@ -31,6 +31,6 @@ trait YamlConvertibleTrait
      */
     public function toYaml()
     {
-        return Yaml::dump($this->jsonSerialize(), 3, 4, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
+        return Yaml::dump($this->jsonSerialize(), 3, 4);
     }
 }

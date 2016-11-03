@@ -3,8 +3,8 @@ services:
     app:
         build: ./app
         volumes:
-          - ../../../../../../:/app
-    php56:
+          - ./../../../../../../../:/app
+    php:
         build: ./php56
         volumes_from:
           - app

@@ -23,7 +23,7 @@ class DockerComposeUpCommand extends ContainerAwareCommand
         $this
             ->setName('docker:compose:up')
             ->setDescription('Starts all containers with Docker Compose')
-            ->setHelp(<<<'EOF'
+            ->setHelp(<<<EOF
 The <info>%command.name%</info> command clears the application cache for a given environment
 and debug mode:
 
@@ -41,8 +41,8 @@ EOF
     {
         /** @var Kernel $kernel */
         $kernel = $this->getContainer()->get('kernel');
-        $dockerComposeFile = $kernel->locateResource('@SymfonyDockerBundle/Resources/config/docker/docker-compose.yml');
+        $dockerComposeFile = $kernel->locateResource('@DockerBundle/Resources/config/docker/docker-compose.yml');
 
-        $output->writeln(shell_exec("docker-compose -f {$dockerComposeFile} up -d --remove-orphans"));
+        $output->writeln(passthru("docker-compose -f {$dockerComposeFile} up -d --remove-orphans"));
     }
 }
