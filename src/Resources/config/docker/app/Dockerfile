@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM ubuntu
 MAINTAINER Daniel Ribeiro <drgomesp@gmail.com>
 
 WORKDIR /app

@@ -70,4 +70,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
       --filename=composer && \
       echo "phar.readonly = off" > /usr/local/etc/php/conf.d/phar.ini
 
+RUN usermod -u 1000 www-data
+
 CMD php-fpm -F --allow-to-run-as-root
